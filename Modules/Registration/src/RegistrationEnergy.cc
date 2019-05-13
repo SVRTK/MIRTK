@@ -528,6 +528,12 @@ double RegistrationEnergy::Value()
     } else {
       value = 0.;
     }
+    
+    // added modification - 26/09/18
+    if (IsNaN(value)) {
+        value = 0.;
+    }
+    
     if (IsNaN(value)) {
       string name = _Term[i]->Name();
       if (name.empty()) name = ToString(i + 1);
