@@ -32,7 +32,7 @@
 #include "mirtk/SparsityConstraint.h"
 
 
-namespace mirtk {
+namespace mirtk { 
 
 
 // =============================================================================
