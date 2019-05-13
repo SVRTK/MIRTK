@@ -245,6 +245,8 @@ void HistogramImageSimilarity::Initialize()
     if (IsNaN(smin)) Source()->InputImage()->GetMinMaxAsDouble(&smin, &smax);
     if (fequal(tmin, tmax)) {
       cerr << this->NameOfClass() << "::Initialize(): Input target image has homogeneous intensity values only" << endl;
+        GenericImage<double> tt = *(Target()->InputImage());
+        tt.Write("ttt.nii.gz");
       exit(1);
     }
     if (fequal(smin, smax)) {
