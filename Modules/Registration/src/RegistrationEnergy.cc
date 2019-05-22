@@ -500,8 +500,9 @@ double RegistrationEnergy::InitialValue()
     if (IsNaN(value)) {
       string name = _Term[i]->Name();
       if (name.empty()) name = ToString(i + 1);
-      cerr << "RegistrationEnergy::InitialValue: Value of term " << name << " is NaN!" << endl;
-      exit(1);
+      //cerr << "RegistrationEnergy::InitialValue: Value of term " << name << " is NaN!" << endl;
+      value = 0.0;
+      //exit(1);
     }
     sum += value;
   }
@@ -537,8 +538,9 @@ double RegistrationEnergy::Value()
     if (IsNaN(value)) {
       string name = _Term[i]->Name();
       if (name.empty()) name = ToString(i + 1);
-      cerr << "RegistrationEnergy::Value: Value of term " << name << " is NaN!" << endl;
-      exit(1);
+      //cerr << "RegistrationEnergy::Value: Value of term " << name << " is NaN!" << endl;
+      //exit(1);
+      value = 0.0; 
     }
     sum += value;
   }
