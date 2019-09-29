@@ -76,6 +76,7 @@ basis_project (
     Packages/DrawEM
     Packages/Scripting
     Packages/Viewer
+    Packages/SVRTK
 
   # --------------------------------------------------------------------------
   # list of modules enabled by default
@@ -95,6 +96,7 @@ basis_project (
     DrawEM
     Scripting
     Viewer
+    SVRTK
 
   # --------------------------------------------------------------------------
   # dependencies

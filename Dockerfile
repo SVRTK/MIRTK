@@ -64,6 +64,7 @@ RUN ls /usr/src/MIRTK \
       -D MODULE_DrawEM=ON \
       -D MODULE_Mapping=ON \
       -D MODULE_Scripting=ON \
+      -D MODULE_SVRTK=ON \
       -D WITH_ARPACK=ON \
       -D WITH_FLANN=ON \
       -D WITH_MATLAB=OFF \

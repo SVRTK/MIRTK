@@ -50,7 +50,7 @@ else
   cpu_cores=1
 fi
 
-modules=(Common Numerics Image IO Transformation Registration DrawEM)
+modules=(Common Numerics Image IO Transformation Registration DrawEM SVRTK)
 if [ $WITH_VTK = ON ]; then
   modules=(${modules[@]} PointSet Deformable Mapping)
   if [ $WITH_FLTK = ON ]; then
