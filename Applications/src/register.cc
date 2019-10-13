@@ -246,6 +246,8 @@ void PrintHelp(const char* name)
   cout << "      Alias for :option:`-levels` <n> <n> which only performs the registration on a single level.\n";
   cout << "  -bg, -background, -padding <value>\n";
   cout << "      \"Background value\" (threshold) of input and output images (default: none)\n";
+  cout << "  -bg1 <value>, -bg2 <value>\n";
+  cout << "      \"Background values\" (thresholds) of input and output images (default: none)\n";
   cout << "  -ds <width>\n";
   cout << "      \"Control point spacing\" of free-form deformation on highest resolution level. (default: 4x min voxel size)\n";
   cout << "  -be <w>\n";
@@ -861,6 +863,16 @@ int main(int argc, char **argv)
       double w;
       PARSE_ARGUMENT(w);
       Insert(params, "NegJac penalty weight", w);
+    }
+    else if (OPTION("-bg1")) {
+        double v;
+        PARSE_ARGUMENT(v);
+        Insert(params, "Background value for image 1", v);
+    }
+    else if (OPTION("-bg2")) {
+        double v;
+        PARSE_ARGUMENT(v);
+        Insert(params, "Background value for image 2", v);
     }
     else if (OPTION("-padding") || OPTION("-bg") || OPTION("-background")) {
       double v;

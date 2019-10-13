@@ -244,13 +244,12 @@ void HistogramImageSimilarity::Initialize()
     if (IsNaN(tmin)) Target()->InputImage()->GetMinMaxAsDouble(&tmin, &tmax);
     if (IsNaN(smin)) Source()->InputImage()->GetMinMaxAsDouble(&smin, &smax);
     if (fequal(tmin, tmax)) {
-      cerr << this->NameOfClass() << "::Initialize(): Input target image has homogeneous intensity values only" << endl;
-        GenericImage<double> tt = *(Target()->InputImage());
-        tt.Write("ttt.nii.gz");
+//      cerr << this->NameOfClass() << "::Initialize(): Input target image has homogeneous intensity values only" << endl;
+//        GenericImage<double> tt = *(Target()->InputImage());
       exit(1);
     }
     if (fequal(smin, smax)) {
-      cerr << this->NameOfClass() << "::Initialize(): Input source image has homogeneous intensity values only" << endl;
+//      cerr << this->NameOfClass() << "::Initialize(): Input source image has homogeneous intensity values only" << endl;
       exit(1);
     }
     const double twidth = (tmax - tmin) / _NumberOfTargetBins;
