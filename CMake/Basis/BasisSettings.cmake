@@ -52,6 +52,8 @@ cmake_minimum_required (VERSION 2.8.12 FATAL_ERROR)
 # above. These policies would otherwise trigger a policy not set warning by
 # newer CMake versions.
 
+cmake_policy (SET CMP0057 NEW)
+
 if (POLICY CMP0016)
   cmake_policy (SET CMP0016 NEW)
 endif ()
