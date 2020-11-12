@@ -23,7 +23,9 @@ else ()
   set(_MIRTK_Policies_INCLUDED TRUE)
 endif ()
 
-cmake_policy (SET CMP0057 NEW)
+if (POLICY CMP0057)
+  cmake_policy (SET CMP0057 NEW)
+endif ()
 
 if (POLICY CMP0042)
   cmake_policy(SET CMP0042 NEW)
